@@ -1,0 +1,565 @@
+/* Genel */
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header ve nav */
+.main-header {
+  background-color: white;
+  padding: 30px 60px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  margin-left: -80px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 22px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #18322F;
+}
+
+.add-plant-btn {
+  background-color: #18322F;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 14px 35px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-plant-btn:hover {
+  background-color: #145049;
+}
+
+/* Hero */
+.hero-section {
+  padding: 40px 20px 50px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.hero-section h1 {
+  font-size: 64px;
+  line-height: 87px;
+  font-weight: 800;
+  color: #000000;
+  max-width: 1000px;
+  margin: 0 auto 0px;
+}
+
+.hero-section p {
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 600;
+  color: #000000;
+  max-width: 850px;
+  margin: 10px auto 20px;
+}
+
+.hero-btn {
+  background-color: #18322F;
+  color: white;
+  padding: 18px 40px;
+  font-size: 32px;
+  font-weight: 800;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hero-btn:hover {
+  background-color: #145049;
+}
+
+/* Diğer kutular ve pozisyonlar */
+.bitki-box {
+  background-color: #225F58;
+  color: white;
+  width: 231px;
+  height: 274px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  position: absolute;
+  top: 580px;
+  right: 230px;
+}
+
+.orta-gorsel {
+  position: absolute;
+  top: 510px;
+  left: 640px;
+  width: 370px;
+  height: 444px;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.kutu-sol-ust {
+  position: absolute;
+  width: 196px;
+  height: 214px;
+  left: 240px;
+  top: 470px;
+  background: #18322F;
+  border-radius: 30px;
+}
+
+.kutu-sol-alt {
+  position: absolute;
+  width: 196px;
+  height: 175px;
+  left: 240px;
+  top: 794px;
+  background: #A51719;
+  border-radius: 30px;
+}
+
+.kutu-sol-yazi {
+  position: absolute;
+  width: 158px;
+  height: 189px;
+  left: 255px;
+  top: 505px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.kutu-sol-alt-yazi {
+  position: absolute;
+  width: 196px;
+  height: 66px;
+  left: 240px;
+  top: 808px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.bayrak-gorsel {
+  position: absolute;
+  width: 67px;
+  height: 53px;
+  left: 304px;
+  top: 888px;
+}
+
+/* Bitkiler */
+#bitkilerim {
+  background-color: #F9F9F9;
+  padding: 100px 0 100px;
+  text-align: center;
+  margin-top: 350px;
+}
+
+#bitkilerim h2 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 50px;
+  color: #000;
+}
+
+.plant-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.plant-card {
+  background-color: #E6E6E6;
+  width: 246px;
+  border-radius: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plant-image {
+  width: 206px;
+  height: 184px;
+  background-color: #D9D9D9;
+  border-radius: 30px;
+  margin-bottom: 15px;
+}
+
+.plant-name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.plant-status {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  margin: 1px 0;
+}
+
+.plant-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.btn {
+  width: 56px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.btn-sula { background-color: #1B98C5; }
+.btn-sil { background-color: #A51719; }
+.btn-gubre { background-color: #18322F; }
+
+/* FAQ */
+#faq {
+  padding: 100px 0;
+  text-align: center;
+}
+
+#faq h2 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+
+#faq-container {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.faq-item {
+  background: #F3F3F3;
+  border-radius: 30px;
+  padding: 25px 40px;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-answer {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 10px;
+  display: none;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item .arrow {
+  transition: transform 0.3s;
+}
+
+.faq-item.active .arrow {
+  transform: rotate(90deg);
+}
+
+/* Footer */
+footer {
+  background-color: #18322F;
+  padding: 40px 0 20px;
+  color: white;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px;
+}
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .main-header {
+    padding: 15px 20px;
+  }
+
+  .header-container {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .logo-img {
+    height: 30px;
+    width: auto;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+
+  /* Navigation menüsü - hamburger açıldığında görünecek */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .nav-links.mobile-visible {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 15px 0;
+    font-size: 18px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  /* Mobilde bitki ekle butonu gizli */
+  .add-plant-btn {
+    display: none;
+  }
+}
+/* Mevcut hero CSS'inin altına ekle */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 30px 15px 40px;
+  }
+
+  .hero-section h1 {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 15px;
+  }
+
+  .hero-section p {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 15px auto 25px;
+  }
+
+  .hero-btn {
+    font-size: 24px;
+    padding: 15px 30px;
+  }
+}
+
+/* Tablet için */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .hero-section h1 {
+    font-size: 48px;
+    line-height: 60px;
+  }
+  
+  .hero-section p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  
+  .hero-btn {
+    font-size: 28px;
+    padding: 16px 35px;
+  }
+}
+@media (max-width: 768px) {
+  /* Mevcut hero mobile CSS'lerin altına ekle */
+  
+  /* Hero'dan sonraki tüm kutular mobilde gizli */
+  .bitki-box,
+  .orta-gorsel,
+  .kutu-sol-ust,
+  .kutu-sol-alt,
+  .kutu-sol-yazi,
+  .kutu-sol-alt-yazi,
+  .bayrak-gorsel {
+    display: none;
+  }
+
+  /* Bitkilerim bölümü mobilde daha yakın */
+  #bitkilerim {
+    margin-top: 50px; /* Desktop'ta 350px kalacak */
+  }
+}
+@media (max-width: 768px) {
+  /* Mevcut mobile CSS'lerin altına ekle */
+  
+  #faq {
+    padding: 60px 15px;
+  }
+
+  #faq h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  #faq-container {
+    max-width: none;
+    margin: 0;
+    gap: 15px;
+  }
+
+  .faq-item {
+    padding: 20px 15px;
+    font-size: 18px;
+    border-radius: 20px;
+  }
+
+  .faq-question {
+    line-height: 24px;
+  }
+
+  .faq-answer {
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 15px;
+  }
+
+  .arrow {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+}
+
+/* Tablet için */
+@media (max-width: 1024px) and (min-width: 769px) {
+  #faq h2 {
+    font-size: 40px;
+  }
+  
+  .faq-item {
+    font-size: 22px;
+    padding: 22px 30px;
+  }
+}
+@media (max-width: 768px) {
+  /* Mevcut mobile CSS'lerin altına ekle */
+  
+  footer {
+    padding: 30px 15px 15px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    max-width: none;
+    margin: 0;
+  }
+
+  .footer-container > div {
+    margin: 0;
+  }
+
+  .footer-container h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white;
+  }
+
+  .footer-container p {
+    font-size: 14px;
+    margin: 5px 0;
+    line-height: 20px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    line-height: 18px;
+  }
+}
+
+/* Tablet için */
+@media (max-width: 1024px) and (min-width: 769px) {
+  footer {
+    padding: 35px 20px 15px;
+  }
+  
+  .footer-container {
+    gap: 30px;
+    justify-content: space-around;
+  }
+}

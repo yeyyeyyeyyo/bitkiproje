@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plantguru</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-container">
+      <img class="logo-img" src="logo-plantguru 1.svg" alt="Plantguru Logo">
+      <div class="hamburger" onclick="toggleMobileMenu()">☰</div>
+  
+      <nav class="nav-links">
+        <a href="#">Anasayfa</a>
+        <a href="#bitkilerim">Bitkilerim</a>
+        <a href="#faq">SSS</a>
+      </nav>
+  
+      <button class="add-plant-btn" type="button">Bitki Ekle</button>
+        </div>
+  </header>
+  
+
+  <section class="hero-section">
+    <h1>Bitkilerinizi düzenli takip edin, sağlıklı büyümelerini izleyin!</h1>
+    <p>Bitkilerinizi zamanında sulayın, gübrelemeyi unutmayın ve her zaman bakımlı tutun.<br>Kolay kullanım, temiz arayüz ve pratik takip sistemi ile tüm bitkileriniz kontrol altında!</p>
+    <button class="hero-btn" type="button">Bitki Ekle</button>
+  </section>
+
+  <div class="bitki-box">
+    <span>+100’den</span>
+    <span> fazla</span>
+    <span>bitki</span>
+    <span>seçeneği</span>
+  </div>
+
+  <img class="orta-gorsel" src="image.png" alt="Bitki Görseli">
+
+  <div class="kutu-sol-ust"></div>
+  <div class="kutu-sol-alt"></div>
+  <div class="kutu-sol-yazi">Bitkilerini<br>kolaylıkla<br>takip et</div>
+  <div class="kutu-sol-alt-yazi">Made in<br>Türkiye</div>
+  <img class="bayrak-gorsel" src="flag.png" alt="Bayrak">
+
+  <section id="bitkilerim">
+    <h2>Bitkilerim</h2>
+    <div class="plant-list" id="plant-list">
+      <p id="no-plants-message" style="text-align:center; font-size:18px; font-weight:500; color:#777;">
+        Henüz hiç bitki eklemediniz.
+      </p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>Sıkça Sorulan Sorular</h2>
+    <div id="faq-container">
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-question">Bitki eklemek için ne yapmalıyım? <span class="arrow">❯</span></div>
+        <div class="faq-answer">Bitki eklemek için 'Bitki Ekle' butonuna tıklayın ve bilgileri girin.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-question">Sulama zamanı geldiğini nasıl anlarım? <span class="arrow">❯</span></div>
+        <div class="faq-answer">Bitkilerin sulama zamanı geldiğinde uyarı alırsınız.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-question">Hatırlatmalar nasıl çalışıyor? <span class="arrow">❯</span></div>
+        <div class="faq-answer">Hatırlatmalar, belirli periyotlarla sistem tarafından gösterilir.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-question">Verilerim kaybolur mu? <span class="arrow">❯</span></div>
+        <div class="faq-answer">Hayır, verileriniz tarayıcıda saklanır ve kaybolmaz.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-question">Hangi bitkiler için uygundur? <span class="arrow">❯</span></div>
+        <div class="faq-answer">Sistem tüm ev bitkileri için uygundur.</div>
+      </div>
+    </div>
+  </section>
+
+  <div id="plant-form" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:#fff; padding:20px; border-radius:20px; box-shadow:0 0 20px rgba(0,0,0,0.2); z-index:200; width:250px;">
+    <h3 style="margin-top:0; text-align:center;">Yeni Bitki Ekle</h3>
+    <form id="addPlantForm">
+      <input type="text" id="plantName" name="plantName" placeholder="Bitki adı"
+             style="width:100%; margin-bottom:10px; padding:10px; border-radius:10px; border:1px solid #ccc;">
+      <input type="text" id="plantImage" name="plantImage" placeholder="Görsel URL (opsiyonel)"
+             style="width:100%; margin-bottom:10px; padding:10px; border-radius:10px; border:1px solid #ccc;">
+      <button type="submit"
+              style="background:#18322F; color:white; padding:10px 20px; border:none; border-radius:10px; width:100%; font-weight:700;">
+        Ekle
+      </button>
+      <button type="button" onclick="closeForm()"
+              style="margin-top:10px; background:#aaa; color:white; padding:10px 20px; border:none; border-radius:10px; width:100%;">
+        İptal
+      </button>
+    </form>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div><img src="plant-guru.svg" alt="Plantguru Logo" style="height: 30px; margin-top: 20px; margin-bottom: 60px;"></div>
+      <div><h4>Araçlar</h4><p>Anasayfa</p><p>Bitkilerim</p><p>SSS</p></div>
+      <div><h4>Şirket</h4><p>Hakkımızda</p><p>Bize ulaşın</p><p>Blog</p></div>
+      <div><h4>Yasal Bilgiler</h4><p>Gizlilik şartları</p><p>Şartlar & koşullar</p><p>Çerez politikası</p></div>
+      <div><h4>Bizi takip edin</h4>
+        <p><img src="instagram-icon.svg" alt="Instagram" style="height: 16px; vertical-align: middle; margin-right: 8px;">Instagram</p>
+        <p><img src="instagram-icon.svg" alt="Instagram" style="height: 16px; vertical-align: middle; margin-right: 8px;">Facebook</p>
+        <p><img src="instagram-icon.svg" alt="Instagram" style="height: 16px; vertical-align: middle; margin-right: 8px;">Twitter</p>
+      </div>
+    </div>
+    <p class="footer-bottom">Copyright © 2025 All Rights Reserved. Maded by Yusuf Buğra Yazar - Alper Nafiz Alp - Talha Mete Yılmaz - Ömer kavak</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
